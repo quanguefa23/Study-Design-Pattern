@@ -29,6 +29,7 @@ Một Composite Pattern bao gồm các thành phần cơ bản sau:
 **Sample Problem**:  
 
 Cài đặt Composite Pattern về chương trình quản lý một hệ thống tập tin.  
+
 ![design-patterns-composite-example](https://user-images.githubusercontent.com/60953757/79002796-6db51800-7b7b-11ea-9747-8b4e287fe270.png)
 
 ## 4. Prototype
