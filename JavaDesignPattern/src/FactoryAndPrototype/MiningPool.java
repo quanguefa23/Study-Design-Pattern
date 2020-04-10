@@ -25,7 +25,7 @@ public class MiningPool {
         prototypes.put("XRP", xrp); // XRP and Ripple is the same coin
     }
 
-    public CryptoCurrency mine(String name) {
+    public static CryptoCurrency mine(String name) {
         try {
             //clone object from prototype, throws exception if the name does not exist in HashMap
             CryptoCurrency cryptoCurrency = prototypes.get(name).clone();
