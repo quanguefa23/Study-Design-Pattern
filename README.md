@@ -1,5 +1,5 @@
 # Design-Pattern
-Singleton - Adapter - Composite - Prototype - Factory - Builder - Observer
+Singleton - Adapter - Composite - Factory - Prototype - Builder - Observer
 
 ## 1. Singleton
 Implement singleton theo 4 cách:
@@ -32,5 +32,20 @@ Cài đặt Composite Pattern về chương trình quản lý một hệ thống
 
 ![design-patterns-composite-example](https://user-images.githubusercontent.com/60953757/79002796-6db51800-7b7b-11ea-9747-8b4e287fe270.png)
 
-## 4. Prototype
+## 4&5. Factory & Prototype
+Một Factory Pattern bao gồm các thành phần cơ bản sau:
+  - Super Class: môt supper class trong Factory Pattern có thể là một interface, abstract class hay một class thông thường.
+  - Sub Classes: các sub class sẽ implement các phương thức của supper class theo nghiệp vụ riêng của nó.
+  - Factory Class: một class chịu tránh nhiệm khởi tạo các đối tượng sub class dựa theo tham số đầu vào. Lưu ý: lớp này là Singleton hoặc cung cấp một public static method cho việc truy xuất và khởi tạo đối tượng. Factory class sử dụng if-else hoặc switch-case để xác định class con đầu ra.  
+
+Một Prototype Pattern gồm các thành phần cơ bản sau:
+  - Prototype : interface hoặc abtract class, khai báo phương thức clone để clone chính nó.
+  - ConcretePrototype class : các lớp này thực thi interface (hoặc kế thừa từ lớp abstract) được cung cấp bởi Prototype để copy (nhân bản) chính bản thân nó. Các lớp này chính là thể hiện cụ thể phương thức clone(). Lớp này có thể không cần thiết nếu: Prototype là một class và nó đã implement việc clone chính nó.
+  - Client class : tạo mới object bằng cách gọi Prototype thực hiện clone chính nó.  
+
+![design-patterns-prototype-diagram](https://user-images.githubusercontent.com/60953757/79008922-968fda00-7b88-11ea-9fdc-445762c3a21a.png)  
+
+**Sample Problem**:  
+MiningPool là một factory để tạo ra các đồng CryptoCurrency, bao gồm: BTC, ETH, XRP. Các đồng CryptoCurrency này có thể được tạo ra bằng cách clone từ một prototype sẵn có và sau đó sửa lại một số thông tin khác. Clients có thể sử dụng MiningPool để tạo ra CryptoCurrency và đặt chúng vào wallet của họ.
+
 
