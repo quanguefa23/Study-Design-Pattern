@@ -1,5 +1,5 @@
 # Design-Pattern
-Singleton- Adapter - Composite - Prototype - Factory - Builder - Observer
+Singleton - Adapter - Composite - Prototype - Factory - Builder - Observer
 
 ## Singleton
 Implement singleton theo 4 cách:
