@@ -1,6 +1,6 @@
 # Design-Pattern
-Singleton - Adapter - Composite - Factory - Prototype - Builder - Observer
-
+Các Design Pattern thường gặp: Singleton - Adapter - Composite - Factory - Prototype - Builder - Observer  
+Lưu ý: Sample Problem là đề bài cho code mẫu được đặt bên trong thư mục JavaDesignPattern  
 ## 1. Singleton
 Implement singleton theo 4 cách:
   - EAGER INITIALIZATION
@@ -46,6 +46,7 @@ Một Prototype Pattern gồm các thành phần cơ bản sau:
 ![design-patterns-prototype-diagram](https://user-images.githubusercontent.com/60953757/79008922-968fda00-7b88-11ea-9fdc-445762c3a21a.png)  
 
 **Sample Problem**:  
+
 MiningPool là một factory để tạo ra các đồng CryptoCurrency, bao gồm: BTC, ETH, XRP. Các đồng CryptoCurrency này có thể được tạo ra bằng cách clone từ một prototype sẵn có và sau đó sửa lại một số thông tin khác. Clients có thể sử dụng MiningPool để tạo ra CryptoCurrency và đặt chúng vào wallet của họ.
 
 
