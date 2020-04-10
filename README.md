@@ -1,6 +1,6 @@
 # Design-Pattern
-Các Design Pattern thường gặp: Singleton - Adapter - Composite - Factory - Prototype - Builder - Observer  
-Lưu ý: Sample Problem là đề bài cho code mẫu được đặt bên trong thư mục JavaDesignPattern  
+Các Design Pattern xuất hiện trong repository này: Singleton, Adapter, Composite, Factory, Prototype, Builder, Observer  
+Lưu ý: **Sample Problem** là đề bài cho code mẫu được đặt bên trong thư mục JavaDesignPattern  
 ## 1. Singleton
 Implement singleton theo 4 cách:
   - EAGER INITIALIZATION
