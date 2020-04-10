@@ -1,0 +1,28 @@
+package Adapter;
+
+/**
+ * Thông dịch viên (Translator) sẽ là Adapter, nhận message tiếng Việt từ Client và chuyển đổi nó sang tiếng Nhật
+ * trước khi gởi cho người Nhật (adaptee).
+ */
+public class TranslatorAdapter implements VietnameseTarget {
+
+    private JapaneseAdaptee adaptee;
+
+    public TranslatorAdapter(JapaneseAdaptee adaptee) {
+        this.adaptee = adaptee;
+    }
+
+    @Override
+    public void send(String words) {
+        System.out.println("Reading Words ...");
+        System.out.println(words);
+        String vietnameseWords = this.translate(words);
+        System.out.println("Sending Words ...");
+        adaptee.receive(vietnameseWords);
+    }
+
+    private String translate(String vietnameseWords) {
+        System.out.println("Translated!");
+        return "こんにちは";
+    }
+}
