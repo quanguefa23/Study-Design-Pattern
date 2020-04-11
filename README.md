@@ -67,6 +67,27 @@ Một tài khoản ngân hàng bao gồm các thông tin: Tên chủ tài khoả
 
 ## 7. Observer
 
+Các thành phần tham gia Observer Pattern:
 
+  - Subject : chứa danh sách các observer,  cung cấp phương thức để có thể thêm và loại bỏ observer.
+  - Observer : định nghĩa một phương thức update() cho các đối tượng sẽ được subject thông báo đến khi có sự thay đổi trạng thái.
+  - ConcreteSubject : cài đặt các phương thức của Subject, lưu trữ trạng thái danh sách các ConcreateObserver, gửi thông báo đến các observer của nó khi có sự thay đổi trạng thái.
+  - ConcreteObserver : cài đặt các phương thức của Observer, lưu trữ trạng thái của subject, thực thi việc cập nhật để giữ cho trạng thái đồng nhất với subject gửi thông báo đến.  
+  
+![design-patterns-observer-diagram](https://user-images.githubusercontent.com/60953757/79040933-2f206b80-7c16-11ea-926f-93067391b1b3.png)  
 
+Sự tương tác giữa subject và các observer như sau: mỗi khi subject có sự thay đổi trạng thái, nó sẽ duyệt qua danh sách các observer của nó và gọi phương thức cập nhật trạng thái ở từng observer, có thể truyền chính nó vào phương thức để các observer có thể lấy ra trạng thái của nó và xử lý.  
+
+**Sample Problem**: 
+
+Giả sử hệ thống của chúng ta cần theo dõi về tài khoản của người dùng. Mọi thao tác của người dùng đều cần được ghi log lại, sẽ thực hiện gửi mail thông báo khi tài khoản hết hạn, thực hiện chặn người dùng nếu truy cập không hợp lệ,...
+
+![design-patterns-observer-example](https://user-images.githubusercontent.com/60953757/79040941-35aee300-7c16-11ea-97ab-63b3c998a76b.png)  
+
+Chương trình của chúng ta như sau:
+
+  - Subject : cung cấp các phương thức để thêm, loại bỏ, thông báo observer.
+  - AccountService : đóng vai trò là ConcreteSubject, sẽ thông báo tới tất cả các observers bất cứ khi nào có thao tác của người dùng liên quan đến đăng nhập, tài khoản hết hạn.
+  - Observer : định nghĩa một phương thức update() cho các đối tượng sẽ được subject thông báo đến khi có sự thay đổi trạng thái. Phương thức này chấp nhận đối số là SubjectState, cho phép các ConcreteObserver sử dụng dữ liệu của nó.
+  - Logger, Mailer và Protector là các ConcreteObserver. Sau khi nhận được thông báo rằng có thao tác với user và gọi tới phương thức update(), các ConcreteObserver sẽ sử dụng dữ liệu SubjectState để xử lý.  
 
