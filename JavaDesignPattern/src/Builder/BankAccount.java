@@ -83,7 +83,7 @@ public class BankAccount {
     @Override
     public String toString() {
         return "BankAccount [name=" + name + ", accountNumber=" + accountNumber + ", address=" + address + ", email="
-                + email + ", newsletter=" + newsViaEmail + ", mobileBanking=" + mobileBanking + "]";
+                + email + ", newsViaEmail=" + newsViaEmail + ", mobileBanking=" + mobileBanking + "]";
     }
 
 }
