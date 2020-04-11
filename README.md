@@ -63,7 +63,7 @@ Trường hợp đơn giản, chúng ta có thể gộp Builder và ConcreteBuil
 **Sample Problem**:  
 
 Chúng ta sẽ sử dụng builder để tạo một class immutable (trạng thái của tối tượng tạo bởi class đó không thể thay đổi được sau khi việc khởi tạo đối tượng thành công). Cụ thể là:  
-Một tài khoản ngân hàng bao gồm các thông tin: Tên chủ tài khoản, số tài khoản, địa chỉ email, nhận thông báo, sử dụng mobile banking. Một tài khoản được tạo phải có tên chủ tài khoản và số tài khoản. Các thông tin khác tùy theo nhu cầu của khách hàng có thể đăng ký sử dụng.  
+Một tài khoản ngân hàng bao gồm các thông tin: Tên chủ tài khoản, số tài khoản, địa chỉ email, địa chỉ thường trú, nhận thông báo qua email, sử dụng mobile banking. Một tài khoản được tạo phải có tên chủ tài khoản và số tài khoản, các thông tin khác tùy theo nhu cầu của khách hàng có thể đăng ký sử dụng.  
 
 ## 7. Observer
 
