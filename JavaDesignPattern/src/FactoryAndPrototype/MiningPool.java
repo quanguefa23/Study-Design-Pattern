@@ -20,7 +20,7 @@ public class MiningPool {
         prototypes.put("Bitcoin", btc);
         prototypes.put("BTC", btc); //BTC and Bitcoin is the same coin
         prototypes.put("Ethereum", eth);
-        prototypes.put("ETH", eth); //ETH and ethereum is the same coin
+        prototypes.put("ETH", eth); //ETH and Ethereum is the same coin
         prototypes.put("Ripple", xrp);
         prototypes.put("XRP", xrp); // XRP and Ripple is the same coin
     }
