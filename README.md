@@ -47,6 +47,26 @@ Một Prototype Pattern gồm các thành phần cơ bản sau:
 
 **Sample Problem**:  
 
-MiningPool là một factory để tạo ra các đồng CryptoCurrency, bao gồm: BTC, ETH, XRP. Các đồng CryptoCurrency này có thể được tạo ra bằng cách clone từ một prototype sẵn có và sau đó sửa lại một số thông tin khác. Clients có thể sử dụng MiningPool để tạo ra CryptoCurrency và đặt chúng vào wallet của họ.
+MiningPool là một factory để tạo ra các đồng CryptoCurrency, bao gồm: BTC, ETH, XRP. Các đồng CryptoCurrency này có thể được tạo ra bằng cách clone từ một prototype sẵn có và sau đó sửa lại một số thông tin khác. Clients có thể sử dụng MiningPool để tạo ra CryptoCurrency và đặt chúng vào wallet của họ.  
+
+## 6. Builder
+
+Một builder gồm các thành phần cơ bản sau:
+
+  - Product : đại diện cho đối tượng cần tạo, đối tượng này phức tạp, có nhiều thuộc tính.
+  - Builder : là abstract class hoặc interface khai báo phương thức tạo đối tượng.
+  - ConcreteBuilder : kế thừa Builder và cài đặt chi tiết cách tạo ra đối tượng. Nó sẽ xác định và nắm giữ các thể hiện mà nó tạo ra, đồng thời nó cũng cung cấp phương thức để trả các các thể hiện mà nó đã tạo ra trước đó.
+  - Director/ Client: là nơi sẽ gọi tới Builder để tạo ra đối tượng.  
+  
+Trường hợp đơn giản, chúng ta có thể gộp Builder và ConcreteBuilder thành static nested class bên trong Product.  
+
+**Sample Problem**:  
+
+Chúng ta sẽ sử dụng builder để tạo một class immutable (trạng thái của tối tượng tạo bởi class đó không thể thay đổi được sau khi việc khởi tạo đối tượng thành công). Cụ thể là:  
+Một tài khoản ngân hàng bao gồm các thông tin: Tên chủ tài khoản, số tài khoản, địa chỉ email, nhận thông báo, sử dụng mobile banking. Một tài khoản được tạo phải có tên chủ tài khoản và số tài khoản. Các thông tin khác tùy theo nhu cầu của khách hàng có thể đăng ký sử dụng.  
+
+## 7. Observer
+
+
 
 
